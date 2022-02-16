@@ -1,0 +1,88 @@
+@import "/src/style/theme";
+
+@mixin flex-point {
+  display:flex;
+  justify-content: flex-start;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: $color-another-grey;
+  border-radius: 50%;
+}
+
+.post {
+  @include flex-point();
+  flex-direction: column;
+  width: $size-width;
+  height: $size-height;
+  background-color: $color-white;
+  border: 1px solid $color-grey;
+  box-sizing: content-box;
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      font-size: $typography-h6;
+      padding: 20px;
+
+      .logo-space {
+        display: inline-flex;
+        align-items: baseline
+      }
+
+      .logo {
+        @include flex-center();
+        height: 40px;
+        width: 40px;
+        background-color: $color-another-grey;
+        border-radius: 50%;
+      }
+      .text {
+        padding-left: 10px;
+      }
+    }
+
+    .content {
+      @include flex-center();
+      position: relative;
+    }
+
+    .nav{
+      position:absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      visibility: hidden;
+      &:hover {
+        visibility: visible;
+      }
+      
+      .around {
+        width: 50px;
+        height:50px;
+
+      }
+
+      .left{
+        @include flex-center();
+        @include button();
+      }
+      .right{
+        @include flex-center();
+        @include button();
+      }
+    }
+
+
+}

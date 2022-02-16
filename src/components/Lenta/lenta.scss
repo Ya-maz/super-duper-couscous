@@ -1,0 +1,10 @@
+@import "/src/style/theme";
+
+.lenta {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: $color-red;
+}
