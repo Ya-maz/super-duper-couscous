@@ -1,5 +1,5 @@
-import './App.scss';
-import { Lenta } from "components/Lenta/Lenta" 
+import "style/App.scss";
+import { Lenta } from "components/Lenta";
 
 function App() {
   return (

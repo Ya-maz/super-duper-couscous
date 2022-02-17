@@ -1,0 +1,9 @@
+@import "/src/style/theme";
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: $color-background;
+  overflow-y: scroll;
+}
+

@@ -1,10 +1,5 @@
 @import "/src/style/theme";
 
-@mixin flex-point {
-  display: flex;
-  justify-content: flex-start;
-}
-
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -16,15 +11,28 @@
 }
 
 @mixin button {
+  display: flex;
+  background: transparent;
+  color: #acacac;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@mixin button-nav {
   width: 20px;
   height: 20px;
   border: none;
-  background-color: $color-another-grey;
+  background-color: transparent;
+  background-color: $color-grey;
   border-radius: 50%;
 }
 
 .post {
-  @include flex-point();
+  display: flex;
   flex-direction: column;
   width: $size-width;
   height: $size-height;
@@ -36,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 45px;
     font-size: $typography-h6;
     padding: 20px;
 
@@ -82,17 +90,17 @@
 
     .left {
       @include flex-center();
-      @include button();
+      @include button-nav();
     }
     .right {
-      @include button();
+      @include button-nav();
     }
   }
   .description {
     .icons {
       display: flex;
       justify-content: space-between;
-      padding: 20px;
+      padding: 15px 20px;
     }
     .icons-left :nth-child(2) {
       padding: 0 15px;
@@ -105,9 +113,8 @@
       @include svgColor();
     }
 
-
     .author {
-      @include flex-point();
+      display: flex;
       padding: 5px 20px;
     }
 
@@ -121,18 +128,62 @@
     .text {
       padding: 0 10px;
 
-    .bold {
-      font-weight: 600;
-    }
-
-    }
-
-    .comment {
-      @include flex-point();
-      padding: 5px 15px;
       .bold {
         font-weight: 600;
       }
+    }
+
+    .comment {
+      display: flex;
+      padding: 0px 20px;
+      .bold {
+        font-weight: 600;
+      }
+    }
+
+    .statistic {
+      display: flex;
+      color: $color-another-grey;
+      padding: 0 20px;
+    }
+
+    .date {
+      display: flex;
+      color: $color-another-grey;
+      font-size: 12px;
+      padding: 5px 20px;
+    }
+  }
+
+  .input {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: $color-white;
+    border-top: 1px solid $color-another-grey;
+    padding: 10px 20px;
+
+    .input-text {
+      display: flex;
+      align-self: center;
+      flex-grow: 15;
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      color: $color-black;
+      resize: none;
+      outline: none;
+      margin: 0 20px
+    }
+
+    .input-button {
+      @include button();
+      flex-grow: 1;
+    }
+    .input-enter {
+      @include button();
+      color: $color-blue;
+      flex-grow: 1;
     }
   }
 }
