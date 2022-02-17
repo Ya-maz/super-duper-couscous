@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/super-duper-couscous/static/css/main.f59b84ef.css",
+    "main.js": "/super-duper-couscous/static/js/main.ad14cb49.js",
+    "static/media/content.jpg": "/super-duper-couscous/static/media/content.046a3f51f8f7a8743c06.jpg",
+    "index.html": "/super-duper-couscous/index.html",
+    "main.f59b84ef.css.map": "/super-duper-couscous/static/css/main.f59b84ef.css.map",
+    "main.ad14cb49.js.map": "/super-duper-couscous/static/js/main.ad14cb49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f59b84ef.css",
+    "static/js/main.ad14cb49.js"
+  ]
+}
